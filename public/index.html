@@ -84,12 +84,14 @@
           loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
         }
 
-        firebase.functions().httpsCallable('helloWorld')()/* .then(response => response) */
-        .then(response => {
-          console.log('response type', typeof(response));
-          console.log('response', response);
-          alert(response);
-        });
+        firebase.functions().httpsCallable('helloWorld')()
+        .then(result => result.data)
+        .then(data => {
+          console.log('response type', typeof(data));
+          console.log('response', data);
+          alert(JSON.stringify(data));
+        })
+        .catch(error => console.error('error: ', error));
 
       });
     </script>
