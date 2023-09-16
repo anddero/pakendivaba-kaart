@@ -8,7 +8,7 @@ window.initMap = async function () {
 };
 
 window.loadMapsApi = function (apiKey) {
-    console.log("loadMapsApi()", apiKey);
+    console.log("loadMapsApi()", "<hidden-api-key>");
     var script = document.createElement('script');
     script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
     script.async = true;
