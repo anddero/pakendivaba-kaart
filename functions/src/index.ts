@@ -5,6 +5,8 @@ import { SheetsUsecase } from './usecaseSheets';
 
 export const getAllSheetData = onCall(async () => {
   logger.info('getAllSheetData()');
+  // TODO Make sure the api keys never reach end users
+  // TODO Check what happens in case of different failures in frontend
   const spreadsheetId = defineString('SPREADSHEET_ID').value();
   const key = defineString('SHEETS_API_KEY').value();
 

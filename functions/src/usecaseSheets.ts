@@ -30,7 +30,7 @@ export namespace SheetsUsecase {
     export const getSheetContent = async function (id: string, subsheetName: string, apiKey: string) {
         logger.info('SheetsUsecase::getSheetContent()', id, subsheetName, '<hidden-api-key>');
         const data = await SheetsApi.querySubsheetData(id, subsheetName, apiKey);
-        return data; // TODO kmere Process a bit
+        return data; // TODO kmere Process a bit // Continue from here and then resolve other TODOs
     };
 
     export const getAllSheetContent = async function (id: string, apiKey: string) {
